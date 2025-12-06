@@ -1,26 +1,70 @@
-# 🤖 Google Form Auto-Filler with Dynamic Mapping
+Google Form Automation — Python + Selenium
 
-This project automates the process of filling and submitting Google Forms using data from CSV files. It supports **multiple forms**, **custom field mapping**, **error handling**, **submission reporting**, and **human-like delays**, all through a simple **command-line interface (CLI)** and a config file.
+A configurable, scalable Google Form automation tool built using Python and Selenium.
+The system reads user data from a dataset (CSV) and automatically fills and submits Google Forms with human-like behaviour, dynamic field mapping, and detailed reporting.
 
----
-The link to the drive containing demo video-https://drive.google.com/drive/folders/1xI3vgPXohF3sRYew7eBHCDHN9vkZ5tKv
+This project demonstrates strong skills in automation, growth experimentation, analytics, and clean engineering design.
 
-## ✅ Features
+ Key Features
+ 1. Automated Google Form Submission
 
-- 🔗 **Support for Multiple Forms** using a `config.json`
-- 🔀 **Dynamic Field Mapping** (manual or automatic by order)
-- 📥 **Dataset Input via CSV** (Excel/JSON-ready)
-- ❗ **Error Handling** for missing or invalid entries
-- 📊 **Submission Status Reporting** (`submission_report.csv`)
-- ⏱️ **Human-Like Random Delays** between actions
-- 💻 **CLI Interface** for simple execution
-- 🧠 **Optional Field Auto-Detection** when config not provided
+Automatically fills and submits any Google Form.
 
----
+Supports multiple form structures.
 
-## 📂 Project Structure
+ 2. Dynamic Field Mapping (Config-Based)
 
-📁 hackathon/
+Field names are mapped using a JSON config.
+
+No need to modify code when switching forms.
+
+ 3. Dataset Input
+
+Reads data from:
+
+CSV (default)
+
+Easily extendable to Excel/JSON
+
+ 4. Human-Like Behaviour Simulation
+
+Random typing speed
+
+Dynamic delays between interactions
+
+Improves reliability and reduces detection
+
+ 5. Robust Error Handling
+
+Handles missing fields
+
+Handles invalid values
+
+Retries form filling on failures
+
+Logs all errors clearly
+
+ 6. Submission Reporting
+
+Generates a submission_report.csv, containing:
+
+Row number
+
+Success/Failure
+
+Error description
+
+ 7. Clean, Reusable Architecture
+
+Modular functions
+
+Separation of driver setup, selectors, and utilities
+
+Easy to extend for new form types
+
+# Project Structure
+
+ hackathon/
 ├── auto_fill_form.py # Main script to run
 ├── config.json # Form-specific settings
 ├── data.csv # Dataset with names, emails, etc.
@@ -28,16 +72,16 @@ The link to the drive containing demo video-https://drive.google.com/drive/folde
 ├── screenshots/ # Screenshots and demo (optional)
 └── README.md # This file##
 
-🔧 Requirements
+Requirements
 - Python 3.8 or later
 - Google Chrome installed
 - Required Python packages:
 pip install selenium pandas webdriver-manager
 
 - How to Use
-✅ Prepare your data.csv file with the correct columns (e.g., Full Name, Institute Email ID, Roll Number).
+1) Prepare your data.csv file with the correct columns (e.g., Full Name, Institute Email ID, Roll Number).
 
-✅ config.json:
+2) config.json:
 
 json
 {
